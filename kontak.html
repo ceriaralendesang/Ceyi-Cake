@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontak & Checkout — Lavelle Cakes</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-cream text-espresso">
+
+<nav id="top" class="navbar navbar-expand-lg sticky-top shadow-sm navbar-bakery">
+  <div class="container">
+    <a class="navbar-brand fw-bold font-serif" href="index.html">Lavelle Cakes</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link " href="index.html">Beranda</a></li>
+<li class="nav-item"><a class="nav-link " href="menu.html">Menu & Katalog</a></li>
+<li class="nav-item"><a class="nav-link " href="galeri.html">Galeri</a></li>
+<li class="nav-item"><a class="nav-link " href="tentang.html">Tentang Kami</a></li>
+<li class="nav-item"><a class="nav-link active fw-semibold text-cocoa" href="kontak.html">Kontak</a></li>
+
+      </ul>
+      <div class="d-flex align-items-center gap-2">
+        <button class="btn btn-outline-cocoa position-relative" type="button" data-bs-toggle="modal" data-bs-target="#cartModal">
+          Keranjang <span id="cartCount" class="badge bg-cocoa ms-1">0</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+<section class="container py-5">
+  <div class="text-center mb-5">
+    <span class="text-uppercase text-cocoa small fw-semibold">Reservasi & Lokasi</span>
+    <h1 class="font-serif mt-1">Selesaikan Pesanan Anda</h1>
+    <p class="text-muted">Lengkapi detail pengiriman atau pengambilan kue di gerai kami.</p>
+  </div>
+
+  <div class="row g-4">
+    <div class="col-12 col-lg-7">
+      <div class="card border-0 shadow-sm rounded-4 p-4">
+        <h4 class="font-serif mb-3">Formulir Pemesanan</h4>
+        <form id="orderForm">
+          <div class="mb-3">
+            <label for="custName" class="form-label small fw-semibold">Nama Lengkap</label>
+            <input type="text" class="form-control" id="custName" placeholder="Masukkan nama Anda" required>
+          </div>
+          <div class="row g-3 mb-3">
+            <div class="col-md-6">
+              <label for="custPhone" class="form-label small fw-semibold">Nomor WhatsApp</label>
+              <input type="tel" class="form-control" id="custPhone" placeholder="0812xxxxxxxx" required>
+            </div>
+            <div class="col-md-6">
+              <label for="custDate" class="form-label small fw-semibold">Tanggal Pengambilan / Kirim</label>
+              <input type="date" class="form-control" id="custDate" required>
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="custMethod" class="form-label small fw-semibold">Metode Pengambilan</label>
+            <select class="form-select" id="custMethod">
+              <option value="pickup">Ambil di Gerai (Tikala, Manado)</option>
+              <option value="delivery">Kurir Instan Area Manado</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <label for="custNote" class="form-label small fw-semibold">Catatan / Tulisan di Atas Kue</label>
+            <textarea class="form-control" id="custNote" rows="3" placeholder="Contoh: Happy Birthday ke-25, lilin angka 25"></textarea>
+          </div>
+          <button type="submit" class="btn btn-cocoa w-100 py-2">Konfirmasi Pesanan</button>
+          <div id="orderAlert" role="alert"></div>
+        </form>
+      </div>
+    </div>
+
+    <div class="col-12 col-lg-5">
+      <div class="card border-0 shadow-sm rounded-4 p-4 mb-4">
+        <h5 class="font-serif mb-3">Ringkasan Keranjang</h5>
+        <div id="checkoutSummary"></div>
+      </div>
+
+      <div class="card border-0 shadow-sm rounded-4 p-4">
+        <h5 class="font-serif mb-2">Informasi Gerai</h5>
+        <p class="small text-muted mb-2"><strong>Alamat:</strong> Jl. Sam Ratulangi No. 88, Manado, Sulawesi Utara</p>
+        <p class="small text-muted mb-2"><strong>Jam Operasional:</strong> Senin – Minggu, 08.00 – 21.00 WITA</p>
+        <p class="small text-muted mb-0"><strong>WhatsApp:</strong> +62 812-4400-8899</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<div class="modal fade" id="cartModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content rounded-4 border-0">
+      <div class="modal-header border-bottom">
+        <h5 class="modal-title font-serif">Keranjang Pesanan</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <ul id="cartItems" class="list-group list-group-flush mb-3"></ul>
+        <div class="d-flex justify-content-between fw-bold fs-6 border-top pt-2">
+          <span>Total Estimasi</span>
+          <span id="cartTotal" class="text-cocoa">Rp0</span>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline-secondary btn-sm" id="clearCartBtn">Kosongkan</button>
+        <button type="button" class="btn btn-cocoa btn-sm" id="checkoutBtn">Lanjut Checkout</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="py-5 mt-5 footer-bakery">
+  <div class="container">
+    <div class="row gy-4">
+      <div class="col-12 col-md-6">
+        <h4 class="font-serif">Lavelle Cakes</h4>
+        <p class="small opacity-75 mb-0">Menghadirkan kue artisan berbahan baku pilihan dengan cita rasa autentik untuk setiap perayaan Anda.</p>
+      </div>
+      <div class="col-12 col-md-6 text-md-end">
+        <ul class="list-inline mb-2">
+          <li class="list-inline-item"><a href="index.html" class="text-decoration-none text-reset">Beranda</a></li>
+          <li class="list-inline-item ms-3"><a href="menu.html" class="text-decoration-none text-reset">Menu</a></li>
+          <li class="list-inline-item ms-3"><a href="galeri.html" class="text-decoration-none text-reset">Galeri</a></li>
+          <li class="list-inline-item ms-3"><a href="tentang.html" class="text-decoration-none text-reset">Tentang</a></li>
+          <li class="list-inline-item ms-3"><a href="kontak.html" class="text-decoration-none text-reset">Kontak</a></li>
+        </ul>
+        <p class="small opacity-75 mb-0">&copy; 2026 Lavelle Cakes. All rights reserved.</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

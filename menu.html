@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu & Katalog — Lavelle Cakes</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-cream text-espresso">
+
+<nav id="top" class="navbar navbar-expand-lg sticky-top shadow-sm navbar-bakery">
+  <div class="container">
+    <a class="navbar-brand fw-bold font-serif" href="index.html">Lavelle Cakes</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link " href="index.html">Beranda</a></li>
+<li class="nav-item"><a class="nav-link active fw-semibold text-cocoa" href="menu.html">Menu & Katalog</a></li>
+<li class="nav-item"><a class="nav-link " href="galeri.html">Galeri</a></li>
+<li class="nav-item"><a class="nav-link " href="tentang.html">Tentang Kami</a></li>
+<li class="nav-item"><a class="nav-link " href="kontak.html">Kontak</a></li>
+
+      </ul>
+      <div class="d-flex align-items-center gap-2">
+        <button class="btn btn-outline-cocoa position-relative" type="button" data-bs-toggle="modal" data-bs-target="#cartModal">
+          Keranjang <span id="cartCount" class="badge bg-cocoa ms-1">0</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+<section class="container py-5">
+  <div class="text-center mb-4">
+    <span class="text-uppercase text-cocoa small fw-semibold">Katalog Lengkap</span>
+    <h1 class="font-serif mt-1">Menu & Koleksi Kue</h1>
+    <p class="text-muted">Pilih kategori untuk menyaring varian kue, brownies, dan pastry artisan kami.</p>
+    <div class="d-flex justify-content-center flex-wrap gap-2 mt-3">
+      <button class="btn btn-sm btn-cocoa filter-btn active" data-filter="all">Semua</button>
+      <button class="btn btn-sm btn-outline-cocoa filter-btn" data-filter="cake">Whole Cake</button>
+      <button class="btn btn-sm btn-outline-cocoa filter-btn" data-filter="brownies">Brownies & Dessert</button>
+      <button class="btn btn-sm btn-outline-cocoa filter-btn" data-filter="pastry">Artisan Pastry</button>
+    </div>
+  </div>
+
+  <div class="row g-4">
+    <div class="col-12 col-md-4 menu-item" data-category="cake">
+      <div class="card h-100 border-0 shadow-sm card-bakery">
+        <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=800&q=80" class="card-img-top card-cake-img" alt="Belgian Chocolate Ganache">
+        <div class="card-body d-flex flex-column">
+          <span class="badge bg-sand text-espresso align-self-start mb-2">Whole Cake</span>
+          <h5 class="font-serif">Belgian Chocolate Ganache</h5>
+          <p class="text-muted small flex-grow-1">Diameter 20 cm dengan dark chocolate couverture 70% dan lapisan mousse lembut.</p>
+          <div class="d-flex justify-content-between align-items-center mt-2">
+            <span class="fw-bold text-cocoa">Rp285.000</span>
+            <button class="btn btn-sm btn-cocoa btn-order" data-name="Belgian Chocolate Ganache (20cm)" data-price="285000">+ Keranjang</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-4 menu-item" data-category="cake">
+      <div class="card h-100 border-0 shadow-sm card-bakery">
+        <img src="https://images.unsplash.com/photo-1588195538326-c5b1e9f80a1b?auto=format&fit=crop&w=800&q=80" class="card-img-top card-cake-img" alt="Velvet Mocha Layer Cake">
+        <div class="card-body d-flex flex-column">
+          <span class="badge bg-sand text-espresso align-self-start mb-2">Whole Cake</span>
+          <h5 class="font-serif">Velvet Mocha Layer Cake</h5>
+          <p class="text-muted small flex-grow-1">Tiga lapis sponge cokelat moka dengan espresso buttercream yang ringan.</p>
+          <div class="d-flex justify-content-between align-items-center mt-2">
+            <span class="fw-bold text-cocoa">Rp240.000</span>
+            <button class="btn btn-sm btn-cocoa btn-order" data-name="Velvet Mocha Layer Cake" data-price="240000">+ Keranjang</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-4 menu-item" data-category="brownies">
+      <div class="card h-100 border-0 shadow-sm card-bakery">
+        <img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=800&q=80" class="card-img-top card-cake-img" alt="Fudgy Choco Brownies">
+        <div class="card-body d-flex flex-column">
+          <span class="badge bg-sand text-espresso align-self-start mb-2">Brownies & Dessert</span>
+          <h5 class="font-serif">Fudgy Choco Brownies</h5>
+          <p class="text-muted small flex-grow-1">Isi 16 potong dengan shiny crust dan taburan kacang almond panggang.</p>
+          <div class="d-flex justify-content-between align-items-center mt-2">
+            <span class="fw-bold text-cocoa">Rp120.000</span>
+            <button class="btn btn-sm btn-cocoa btn-order" data-name="Fudgy Choco Brownies" data-price="120000">+ Keranjang</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-4 menu-item" data-category="brownies">
+      <div class="card h-100 border-0 shadow-sm card-bakery">
+        <img src="https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?auto=format&fit=crop&w=800&q=80" class="card-img-top card-cake-img" alt="Classic Tiramisu Dessert Box">
+        <div class="card-body d-flex flex-column">
+          <span class="badge bg-sand text-espresso align-self-start mb-2">Brownies & Dessert</span>
+          <h5 class="font-serif">Classic Tiramisu Box</h5>
+          <p class="text-muted small flex-grow-1">Ukuran 500 ml dengan mascarpone asli dan taburan bubuk kakao Belanda.</p>
+          <div class="d-flex justify-content-between align-items-center mt-2">
+            <span class="fw-bold text-cocoa">Rp85.000</span>
+            <button class="btn btn-sm btn-cocoa btn-order" data-name="Classic Tiramisu Dessert Box" data-price="85000">+ Keranjang</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-4 menu-item" data-category="pastry">
+      <div class="card h-100 border-0 shadow-sm card-bakery">
+        <img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=800&q=80" class="card-img-top card-cake-img" alt="Artisan Croissant Box">
+        <div class="card-body d-flex flex-column">
+          <span class="badge bg-sand text-espresso align-self-start mb-2">Artisan Pastry</span>
+          <h5 class="font-serif">Artisan Croissant Box (6 pcs)</h5>
+          <p class="text-muted small flex-grow-1">Kombinasi Butter Croissant, Pain au Chocolat, dan Almond Croissant.</p>
+          <div class="d-flex justify-content-between align-items-center mt-2">
+            <span class="fw-bold text-cocoa">Rp135.000</span>
+            <button class="btn btn-sm btn-cocoa btn-order" data-name="Artisan Croissant Box (6 pcs)" data-price="135000">+ Keranjang</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-4 menu-item" data-category="pastry">
+      <div class="card h-100 border-0 shadow-sm card-bakery">
+        <img src="https://images.unsplash.com/photo-1535141192574-5d4897c12636?auto=format&fit=crop&w=800&q=80" class="card-img-top card-cake-img" alt="Caramel Hazelnut Tart">
+        <div class="card-body d-flex flex-column">
+          <span class="badge bg-sand text-espresso align-self-start mb-2">Artisan Pastry</span>
+          <h5 class="font-serif">Caramel Hazelnut Tart</h5>
+          <p class="text-muted small flex-grow-1">Tartlet renyah dengan krim praline cokelat dan karamel gurih.</p>
+          <div class="d-flex justify-content-between align-items-center mt-2">
+            <span class="fw-bold text-cocoa">Rp165.000</span>
+            <button class="btn btn-sm btn-cocoa btn-order" data-name="Caramel Hazelnut Tart" data-price="165000">+ Keranjang</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<div class="modal fade" id="cartModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content rounded-4 border-0">
+      <div class="modal-header border-bottom">
+        <h5 class="modal-title font-serif">Keranjang Pesanan</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <ul id="cartItems" class="list-group list-group-flush mb-3"></ul>
+        <div class="d-flex justify-content-between fw-bold fs-6 border-top pt-2">
+          <span>Total Estimasi</span>
+          <span id="cartTotal" class="text-cocoa">Rp0</span>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline-secondary btn-sm" id="clearCartBtn">Kosongkan</button>
+        <button type="button" class="btn btn-cocoa btn-sm" id="checkoutBtn">Lanjut Checkout</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="py-5 mt-5 footer-bakery">
+  <div class="container">
+    <div class="row gy-4">
+      <div class="col-12 col-md-6">
+        <h4 class="font-serif">Lavelle Cakes</h4>
+        <p class="small opacity-75 mb-0">Menghadirkan kue artisan berbahan baku pilihan dengan cita rasa autentik untuk setiap perayaan Anda.</p>
+      </div>
+      <div class="col-12 col-md-6 text-md-end">
+        <ul class="list-inline mb-2">
+          <li class="list-inline-item"><a href="index.html" class="text-decoration-none text-reset">Beranda</a></li>
+          <li class="list-inline-item ms-3"><a href="menu.html" class="text-decoration-none text-reset">Menu</a></li>
+          <li class="list-inline-item ms-3"><a href="galeri.html" class="text-decoration-none text-reset">Galeri</a></li>
+          <li class="list-inline-item ms-3"><a href="tentang.html" class="text-decoration-none text-reset">Tentang</a></li>
+          <li class="list-inline-item ms-3"><a href="kontak.html" class="text-decoration-none text-reset">Kontak</a></li>
+        </ul>
+        <p class="small opacity-75 mb-0">&copy; 2026 Lavelle Cakes. All rights reserved.</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

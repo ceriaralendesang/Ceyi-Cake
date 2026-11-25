@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeri — Lavelle Cakes</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-cream text-espresso">
+
+<nav id="top" class="navbar navbar-expand-lg sticky-top shadow-sm navbar-bakery">
+  <div class="container">
+    <a class="navbar-brand fw-bold font-serif" href="index.html">Lavelle Cakes</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link " href="index.html">Beranda</a></li>
+<li class="nav-item"><a class="nav-link " href="menu.html">Menu & Katalog</a></li>
+<li class="nav-item"><a class="nav-link active fw-semibold text-cocoa" href="galeri.html">Galeri</a></li>
+<li class="nav-item"><a class="nav-link " href="tentang.html">Tentang Kami</a></li>
+<li class="nav-item"><a class="nav-link " href="kontak.html">Kontak</a></li>
+
+      </ul>
+      <div class="d-flex align-items-center gap-2">
+        <button class="btn btn-outline-cocoa position-relative" type="button" data-bs-toggle="modal" data-bs-target="#cartModal">
+          Keranjang <span id="cartCount" class="badge bg-cocoa ms-1">0</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+<section class="container py-5">
+  <div class="text-center mb-5">
+    <span class="text-uppercase text-cocoa small fw-semibold">Showcase Karya</span>
+    <h1 class="font-serif mt-1">Galeri Kreasi Lavelle Cakes</h1>
+    <p class="text-muted">Dokumentasi pesanan custom cake, hampers musiman, dan sajian harian dari dapur kami.</p>
+  </div>
+
+  <div class="row g-4">
+    <div class="col-12 col-sm-6 col-lg-4">
+      <div class="card border-0 shadow-sm rounded-4 overflow-hidden gallery-item">
+        <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=800&q=80" class="w-100 gallery-img" alt="Dark Chocolate Drip">
+        <div class="card-body">
+          <h6 class="font-serif mb-1">Dark Chocolate Ganache Drip</h6>
+          <small class="text-muted">Custom Birthday Edition — 20 cm</small>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-sm-6 col-lg-4">
+      <div class="card border-0 shadow-sm rounded-4 overflow-hidden gallery-item">
+        <img src="https://images.unsplash.com/photo-1588195538326-c5b1e9f80a1b?auto=format&fit=crop&w=800&q=80" class="w-100 gallery-img" alt="Mocha Cocoa Cake">
+        <div class="card-body">
+          <h6 class="font-serif mb-1">Velvet Mocha Artisan</h6>
+          <small class="text-muted">Signature Chocolate Series</small>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-sm-6 col-lg-4">
+      <div class="card border-0 shadow-sm rounded-4 overflow-hidden gallery-item">
+        <img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=800&q=80" class="w-100 gallery-img" alt="Fudgy Brownies">
+        <div class="card-body">
+          <h6 class="font-serif mb-1">Fudgy Almond Brownies</h6>
+          <small class="text-muted">Hampers & Corporate Gift Box</small>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-sm-6 col-lg-4">
+      <div class="card border-0 shadow-sm rounded-4 overflow-hidden gallery-item">
+        <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?auto=format&fit=crop&w=800&q=80" class="w-100 gallery-img" alt="Berry Cream Cake">
+        <div class="card-body">
+          <h6 class="font-serif mb-1">Berry Chantilly Celebration</h6>
+          <small class="text-muted">Anniversary & Engagement Cake</small>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-sm-6 col-lg-4">
+      <div class="card border-0 shadow-sm rounded-4 overflow-hidden gallery-item">
+        <img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=800&q=80" class="w-100 gallery-img" alt="French Croissant">
+        <div class="card-body">
+          <h6 class="font-serif mb-1">Morning Viennoiserie</h6>
+          <small class="text-muted">Freshly Baked Every 07.00 WITA</small>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-sm-6 col-lg-4">
+      <div class="card border-0 shadow-sm rounded-4 overflow-hidden gallery-item">
+        <img src="https://images.unsplash.com/photo-1535141192574-5d4897c12636?auto=format&fit=crop&w=800&q=80" class="w-100 gallery-img" alt="Hazelnut Tart">
+        <div class="card-body">
+          <h6 class="font-serif mb-1">Roasted Hazelnut Tart</h6>
+          <small class="text-muted">Weekend Dessert Table</small>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<div class="modal fade" id="cartModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content rounded-4 border-0">
+      <div class="modal-header border-bottom">
+        <h5 class="modal-title font-serif">Keranjang Pesanan</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <ul id="cartItems" class="list-group list-group-flush mb-3"></ul>
+        <div class="d-flex justify-content-between fw-bold fs-6 border-top pt-2">
+          <span>Total Estimasi</span>
+          <span id="cartTotal" class="text-cocoa">Rp0</span>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline-secondary btn-sm" id="clearCartBtn">Kosongkan</button>
+        <button type="button" class="btn btn-cocoa btn-sm" id="checkoutBtn">Lanjut Checkout</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="py-5 mt-5 footer-bakery">
+  <div class="container">
+    <div class="row gy-4">
+      <div class="col-12 col-md-6">
+        <h4 class="font-serif">Lavelle Cakes</h4>
+        <p class="small opacity-75 mb-0">Menghadirkan kue artisan berbahan baku pilihan dengan cita rasa autentik untuk setiap perayaan Anda.</p>
+      </div>
+      <div class="col-12 col-md-6 text-md-end">
+        <ul class="list-inline mb-2">
+          <li class="list-inline-item"><a href="index.html" class="text-decoration-none text-reset">Beranda</a></li>
+          <li class="list-inline-item ms-3"><a href="menu.html" class="text-decoration-none text-reset">Menu</a></li>
+          <li class="list-inline-item ms-3"><a href="galeri.html" class="text-decoration-none text-reset">Galeri</a></li>
+          <li class="list-inline-item ms-3"><a href="tentang.html" class="text-decoration-none text-reset">Tentang</a></li>
+          <li class="list-inline-item ms-3"><a href="kontak.html" class="text-decoration-none text-reset">Kontak</a></li>
+        </ul>
+        <p class="small opacity-75 mb-0">&copy; 2026 Lavelle Cakes. All rights reserved.</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
